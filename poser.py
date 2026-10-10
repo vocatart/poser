@@ -57,7 +57,8 @@ kinect_v1_bones = {
 if __name__ == "__main__":
     landmarker = vision.PoseLandmarker.create_from_options(vision.PoseLandmarkerOptions(
         base_options=BaseOptions(model_asset_path="pose_landmarker_heavy.task"),
-        running_mode=vision.RunningMode.VIDEO)
+        running_mode=vision.RunningMode.VIDEO,
+        num_poses=2)
     )
 
     cap = cv2.VideoCapture(0)
